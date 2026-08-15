@@ -18,7 +18,7 @@ async def start_spinner() -> None:
 
 
 async def stream_response(ag: Agent[Any], prompt: str):
-    spinning = asyncio.create_task(start_spinner(), eager_start=True)
+    spinning = asyncio.create_task(start_spinner())
 
     result: ResponseStream[AgentResponseUpdate, AgentResponse[Any]] = await ag.run(prompt, stream=True)
 

@@ -1,2 +1,4 @@
-agent-framework
-agent-framework-ollama --pre
+agent-framework==1.14.0
+agent-framework-ollama
+agent-framework-gemini
+python-dotenv==1.2.2
