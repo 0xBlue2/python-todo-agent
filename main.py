@@ -10,7 +10,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from tools import TOOLS
+from models import TOOLS
 from chat import stream_response
 from constants import QUIT_COMMANDS
 
@@ -30,7 +30,7 @@ async def main():
     agent = Agent(
         client=client,
         name="Todo Assistant",
-        instructions="You are a helpful assistant for todo lists. Use the create_todo_list tool and web search tool when necessary. Keep responses short.",
+        instructions="You are a helpful assistant for todo lists. Use tools to create or modify the user's todo lists. Keep responses short.",
         tools=TOOLS
     )
 
